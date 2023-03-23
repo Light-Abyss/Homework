@@ -4,5 +4,7 @@
 ## 可视化设计
 + ### [三体人物关系图](https://light-abyss.github.io/Homework/可视化设计/三体人物关系/三体人物关系图.html)
     * 统计了《三体》每册以及全书的主要人物出现频率与人物关系
+    * 全书中抓取$出现次数 \geqslant 30$的人物和$共现次数 \geqslant 5$的关系
+    * 分册中抓取$出现次数 \geqslant 25$的人物和$共现次数 \geqslant 5$的关系
     * 利用Graph和Timeline的组合图表展现
 
