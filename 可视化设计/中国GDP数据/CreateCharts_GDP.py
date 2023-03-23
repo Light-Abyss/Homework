@@ -1,5 +1,6 @@
 from pyecharts import options as opts
-from pyecharts.charts import Bar, Line
+from pyecharts.charts import Bar, Line, Liquid, Grid, Page
+from pyecharts.commons.utils import JsCode
 
 data_name = '中国各省GDP数据.csv'
 data_file = open(data_name, 'r')
@@ -107,4 +108,107 @@ bar = (
 )
 
 line.overlap(bar)
-line.render("中国各省GDP图1.html")
+label_opts = opts.LabelOpts(
+            font_size = 50,
+            position = "inside",
+            formatter = JsCode(
+                """function (param) {
+                    return (Math.floor(param.value * 10000) / 100) + '%';
+                }"""
+            )
+        )
+liquid1 = (
+    Liquid()
+    .add(
+        "GDP",
+        [0.0300, 0.25],
+        center = ["10.5%", "50%"],
+        label_opts = label_opts
+    )
+    .set_global_opts(
+        title_opts = opts.TitleOpts(
+            title = "中国全年GDP增长率",
+            pos_left = '5%',
+            pos_top = '10%'
+        )
+    )
+)
+liquid2 = (
+    Liquid()
+    .add(
+        "第一季度GDP",
+        [0.048, 0.35],
+        center=["30.5%", "50%"],
+        label_opts = label_opts
+    )
+    .set_global_opts(
+        title_opts = opts.TitleOpts(
+            title = "第一季度GDP增长率",
+            pos_left = '25%',
+            pos_top = '10%'
+        )
+    )
+)
+liquid3 = (
+    Liquid()
+    .add(
+        "第二季度GDP",
+        [0.004, 0.35],
+        center=["50.5%", "50%"],
+        label_opts = label_opts
+    )
+    .set_global_opts(
+        title_opts = opts.TitleOpts(
+            title = "第二季度GDP增长率",
+            pos_left = '45%',
+            pos_top = '10%'
+        )
+    )
+)
+liquid4 = (
+    Liquid()
+    .add(
+        "第三季度GDP",
+        [0.039, 0.35],
+        center=["70.5%", "50%"],
+        label_opts = label_opts
+    )
+    .set_global_opts(
+        title_opts = opts.TitleOpts(
+            title = "第三季度GDP增长率",
+            pos_left = '65%',
+            pos_top = '10%'
+        )
+    )
+)
+liquid5 = (
+    Liquid()
+    .add(
+        "第四季度GDP",
+        [0.029, 0.35],
+        center=["90.5%", "50%"],
+        label_opts = label_opts
+    )
+    .set_global_opts(
+        title_opts = opts.TitleOpts(
+            title = "第四季度GDP增长率",
+            pos_left = '85%',
+            pos_top = '10%'
+        )
+    )
+)
+
+grid = (
+    Grid(init_opts = opts.InitOpts(width = '100%'))
+    .add(liquid1, grid_opts = opts.GridOpts())
+    .add(liquid2, grid_opts = opts.GridOpts())
+    .add(liquid3, grid_opts = opts.GridOpts())
+    .add(liquid4, grid_opts = opts.GridOpts())
+    .add(liquid5, grid_opts = opts.GridOpts())
+)
+page = (
+    Page(layout = Page.SimplePageLayout, interval = 30)
+    .add(line)
+    .add(grid)
+)
+page.render("中国GDP数据图.html")
