@@ -138,7 +138,7 @@ liquid2 = (
     .add(
         "第一季度GDP",
         [0.048, 0.35],
-        center=["30.5%", "50%"],
+        center = ["30.5%", "50%"],
         label_opts = label_opts
     )
     .set_global_opts(
@@ -154,7 +154,7 @@ liquid3 = (
     .add(
         "第二季度GDP",
         [0.004, 0.35],
-        center=["50.5%", "50%"],
+        center = ["50.5%", "50%"],
         label_opts = label_opts
     )
     .set_global_opts(
@@ -170,7 +170,7 @@ liquid4 = (
     .add(
         "第三季度GDP",
         [0.039, 0.35],
-        center=["70.5%", "50%"],
+        center = ["70.5%", "50%"],
         label_opts = label_opts
     )
     .set_global_opts(
@@ -186,7 +186,7 @@ liquid5 = (
     .add(
         "第四季度GDP",
         [0.029, 0.35],
-        center=["90.5%", "50%"],
+        center = ["90.5%", "50%"],
         label_opts = label_opts
     )
     .set_global_opts(
@@ -207,7 +207,11 @@ grid = (
     .add(liquid5, grid_opts = opts.GridOpts())
 )
 page = (
-    Page(layout = Page.SimplePageLayout, interval = 30)
+    Page(
+        page_title = '中国GDP数据图',
+        layout = Page.SimplePageLayout,
+        interval = 30
+    )
     .add(line)
     .add(grid)
 )
