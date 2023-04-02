@@ -7,6 +7,9 @@
     * 全书中抓取 出现次数>=30的人物 和 共现次数>=5的关系
     * 分册中抓取 出现次数>=25的人物 和 共现次数>=5的关系
     * 利用Graph和Timeline展现
++ ### [中国部分省份人口数据图](https://light-abyss.github.io/Homework/可视化设计/中国人口地图/中国部分省份人口图.html)
+    * 利用Map展现中国部分省份常住人口数量以及人口自然增长率
+    * 利用Timeline合并两张表
 + ### [中国GDP数据图](https://light-abyss.github.io/Homework/可视化设计/中国GDP数据/中国GDP数据图.html)
     * 利用Bar,Line和Overlap将中国各省（除港澳台）的GDP，人均GDP以及增长率在一张表格中展现
     * 利用Liquid,Grid展现全年和各个季度GDP增长率
