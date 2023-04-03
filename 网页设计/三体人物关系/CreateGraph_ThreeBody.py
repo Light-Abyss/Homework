@@ -11,11 +11,11 @@ name[3] = '三体3死神永生'
 
 node_file_name = ['', '', '', '']
 for i in range(0, 4) :
-    node_file_name[i] = './data/' + name[i] + '-人物节点.csv'
+    node_file_name[i] = './' + name[i] + '-人物节点.csv'
 link_file_name = ['', '', '', '']
 for i in range(0, 4) :
-    link_file_name[i] = './data/' + name[i] + '-人物连接.csv'
-out_file_name = './output/三体人物关系图.html'
+    link_file_name[i] = './' + name[i] + '-人物连接.csv'
+out_file_name = './三体人物关系图.html'
 
 node_line_list = [[], [], [], []]
 for i in range(0, 4) :
