@@ -15,7 +15,7 @@ for i in range(0, 4) :
 link_file_name = ['', '', '', '']
 for i in range(0, 4) :
     link_file_name[i] = './' + name[i] + '-人物连接.csv'
-out_file_name = './三体人物关系图.html'
+out_file_name = './三体人物共现分析图.html'
 
 node_line_list = [[], [], [], []]
 for i in range(0, 4) :
@@ -76,11 +76,11 @@ for i in range(0, 4) :
             opacity = 0.9,    #节点透明度
         )
     )
-    graph[i].set_global_opts(title_opts = opts.TitleOpts(title = name[i]+' 人物关系'))
+    graph[i].set_global_opts(title_opts = opts.TitleOpts(title = name[i]+' 人物共现分析'))
 
 timeline = Timeline(
     opts.InitOpts(
-        page_title = '三体人物关系图',
+        page_title = '三体人物共现分析图',
         width = "100%", 
         height = "640px", 
     )
