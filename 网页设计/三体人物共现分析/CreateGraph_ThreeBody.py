@@ -1,6 +1,6 @@
 from pyecharts.globals import ThemeType
 from pyecharts import options as opts
-from pyecharts.charts import Graph, Timeline
+from pyecharts.charts import Graph, Timeline, Page
 from math import log, sqrt
 
 name = ['', '', '', '']
@@ -88,4 +88,13 @@ timeline = Timeline(
 for i in range(0, 4) :
     timeline.add(graph[i], name[i])
     
-timeline.render(out_file_name)
+page = (
+    Page()
+    .add(timeline)
+    .add_js_funcs(
+    """
+    var img = new Image(); img.src = 'https://s2.ax1x.com/2019/07/08/ZsS0fK.jpg';
+    """
+    )
+)
+page.render(out_file_name)
