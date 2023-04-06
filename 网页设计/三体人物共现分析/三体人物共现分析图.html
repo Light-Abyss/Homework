@@ -5,11 +5,7 @@
     }
     .background {
         background-size: 100% 100%;
-        
         background-image: url(https://pic4.zhimg.com/80/v2-8e0d2c5743fb2b7fc426bd5bfef1c953_1440w.webp);
-        /*
-        background-image: url(https://chinafilminsider.com/wp-content/uploads/2018/03/bcb55fd312515e5595c29621352f11b7.jpg);
-        */
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
@@ -17,7 +13,6 @@
         font-family: "楷体";
         border-radius: 5px;
         background-color: rgba(229, 228, 228, 0.84);
-        /*width: 350px;*/
         border-width:1px;
         border-style:solid;
         border-color:grey;
@@ -48,7 +43,9 @@
     }
     #pic {
         width: 100%;
+        /*
         height: 600px;
+        */
     }
 </style>
 <html>
@@ -121,22 +118,31 @@
                 <div style="width:65%;">
                     <div class="unit" style="height: 655px;">
                         <div style="text-align:center; font-size:180%;">三体图片</div>
-                        <img id="pic" src="https://i6.hexun.com/2018-05-20/193048658.jpeg">
+                        <div style="text-align:center; width:100%; height:640px; display:table;">
+                            <span style="display:table-cell; vertical-align:middle;">
+                            <img id="pic" src="https://pic4.zhimg.com/80/v2-e7da4725a60cfbea1024fa2aaaba2afb_1440w.webp" style="display:inline-block;"/>
+                            </span>
+                        </div>
                         <script>
                             var n = 0;
                             var img_url = [
-                                'https://i6.hexun.com/2018-05-20/193048658.jpeg',
-                                'https://img0.baidu.com/it/u=2963621886,3773368592&fm=253&fmt=auto&app=138&f=JPG?w=500&h=226',
-                                'https://img.zcool.cn/community/01705555452efa0000019ae984a1ac.jpg@1280w_1l_2o_100sh.jpg',
-                                'https://bkimg.cdn.bcebos.com/pic/902397dda144ad3404d7b40fdaa20cf430ad85c9',
-                                'https://www.yubaibai.com.cn/uploads/allimg/201030/004J121Q-0.jpg'
+                                'https://pic4.zhimg.com/80/v2-e7da4725a60cfbea1024fa2aaaba2afb_1440w.webp',
+                                'https://pic1.zhimg.com/80/v2-9c1c3d5f54509d7a3e34e6aeb5c9129c_1440w.webp',
+                                'https://pic4.zhimg.com/80/v2-8e0d2c5743fb2b7fc426bd5bfef1c953_1440w.webp',
+                                'https://pic2.zhimg.com/80/v2-6b359f4f3a91169cc198fac229e559c5_1440w.webp',
+                                'https://pic4.zhimg.com/80/v2-d701939a35246837c9a727e07fff2693_1440w.webp',
+                                'https://pic1.zhimg.com/80/v2-52217a710ed45de35a138033ff1e358b_1440w.webp',
+                                'https://pic1.zhimg.com/80/v2-955907e997cad484c64a7be0b651e0cc_1440w.webp',
+                                'https://picx.zhimg.com/80/d63b720b1c8ff5e2f388f6f92fcb0a5c_1440w.webp',
+                                'https://img01.vgtime.com/web/topic/2019/06/26/190626214251194.jpg',
+                                'https://cdn.luogu.com.cn/upload/image_hosting/55zqx918.png',
                             ]
                             function picplay(){
                                 n++;
                                 if(n == img_url.length) n = 0;
                                 document.getElementById("pic").src = img_url[n]
                             }
-                            setInterval(picplay, 5000);
+                            setInterval(picplay, 4000);
                         </script>
                     </div>
                     
