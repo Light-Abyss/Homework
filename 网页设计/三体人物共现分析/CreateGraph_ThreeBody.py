@@ -15,7 +15,7 @@ for i in range(0, 4) :
 link_file_name = ['', '', '', '']
 for i in range(0, 4) :
     link_file_name[i] = './' + name[i] + '-人物连接.csv'
-out_file_name = './三体人物共现分析图.html'
+out_file_name = './test.html'
 
 node_line_list = [[], [], [], []]
 for i in range(0, 4) :
@@ -63,7 +63,11 @@ color[3] = '#FFB6C1'
 
 graph = []
 for i in range(0, 4) :
-    graph.append(Graph())
+    graph.append(Graph(
+        opts.InitOpts(
+            theme = ThemeType.DARK
+        )
+    ))
     graph[i].add(
         '',
         node_in_graph[i], 
@@ -81,8 +85,9 @@ for i in range(0, 4) :
 timeline = Timeline(
     opts.InitOpts(
         page_title = '三体人物共现分析图',
-        width = "100%", 
-        height = "640px", 
+        width = "60%", 
+        height = "640px",
+        #theme = ThemeType.DARK,
     )
 )
 for i in range(0, 4) :
