@@ -22,5 +22,8 @@
 
 ## 网页设计
 + ### [搜索引擎](https://light-abyss.github.io/Homework/网页设计/搜索引擎/搜索引擎.html)
+    * 整合百度和Bing搜索
 + ### [三体人物共现分析](https://light-abyss.github.io/Homework/网页设计/三体人物共现分析/三体人物共现分析图.html)
+    * 展现《三体》每册及全书主要人物的共现次数
+    * 利用JS实现随机名言和图片轮流播放
 
